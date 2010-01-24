@@ -1,0 +1,6 @@
+inherit gnome2
+
+DESCRIPTION="Qalculate units converter"
+HOMEPAGE="http://qalculate.sourceforge.net/"
+SRC_URI="mirror://sourceforge/qalculate/${P}.tar.gz"
+PATCH_URI="0.9.4-build.patch"

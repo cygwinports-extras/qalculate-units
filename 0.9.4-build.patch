@@ -1,0 +1,25 @@
+--- origsrc/qalculate-units-0.9.4/configure.in	2006-04-18 02:13:12.000000000 -0500
++++ src/qalculate-units-0.9.4/configure.in	2010-01-23 23:47:21.933114400 -0600
+@@ -63,12 +63,6 @@ AC_CHECK_LIB(pthread, pthread_create, [L
+ 
+ AC_LANG([C++])
+ 
+-AC_PATH_CLN(1.1.0, [
+-     	LIBS="$LIBS $CLN_LIBS"
+-     	CPPFLAGS="$CPPFLAGS $CLN_CPPFLAGS"
+-  	AC_DEFINE(HAVE_LIBCLN,1,[If CLN can be used])
+-], AC_MSG_ERROR([No suitable installed version of CLN could be found.]))
+-
+ PKG_CHECK_MODULES(GLIB, [
+ 	glib-2.0 >= 2.4
+ 	libxml-2.0
+--- origsrc/qalculate-units-0.9.4/src/Makefile.am	2005-10-08 10:26:37.000000000 -0500
++++ src/qalculate-units-0.9.4/src/Makefile.am	2010-01-23 23:57:48.810969700 -0600
+@@ -5,6 +5,7 @@
+ INCLUDES = \
+ 	-DPACKAGE_DATA_DIR=\""$(datadir)"\" \
+ 	-DPACKAGE_LOCALE_DIR=\""$(prefix)/$(DATADIRNAME)/locale"\" \
++	-I$(top_srcdir) \
+ 	@GTK_CFLAGS@ \
+ 	@GLIB_CFLAGS@ \
+ 	@QALCULATE_CFLAGS@
