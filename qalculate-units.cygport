@@ -1,0 +1,14 @@
+inherit gnome2
+
+NAME="qalculate-units"
+VERSION=0.9.4
+RELEASE=1
+CATEGORY="Math"
+SUMMARY="Units converter"
+DESCRIPTION="Qalculate! is a multi-purpose desktop calculator for GNU/Linux.
+It is small and simple to use but with much power and versatility underneath.
+Features include customizable functions, units, arbitrary precision, plotting,
+and a user-friendly interface. This package contains a units converter."
+HOMEPAGE="http://qalculate.sourceforge.net/"
+SRC_URI="mirror://sourceforge/qalculate/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="0.9.4-build.patch"
